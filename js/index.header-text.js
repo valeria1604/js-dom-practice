@@ -1,4 +1,5 @@
 const headerTitle = document.querySelector('.header__title');
+headerTitle.innerText = 'Hello there js';
 
 const greetings = [
     'HELLO!',
@@ -7,15 +8,8 @@ const greetings = [
     'GREETINGS',
     'ВІТАЮ!',
     'ПРИВІТ!'
-];
+]
 
-const getRandomEl = (arr) => arr[ Math.floor(Math.random() * arr.length) ];
+const randomElement = (arr) => arr[ Math.floor(Math.random() * arr.length) ];
+headerTitle.innerText = randomElement(greetings);
 
-// Не рекомендовано
-// headerTitle.style.color = 'red';
-
-const toggleHighlight = () => headerTitle.classList.toggle('highlight');
-setInterval(toggleHighlight, 2000);
-
-
-headerTitle.innerText = getRandomEl(greetings);
